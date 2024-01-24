@@ -3,6 +3,23 @@ public class Person {
     private int age;
     private int salary;
 
+    // constructor
+    public Person() {
+        name = "newBorn";
+        age = 1;
+        salary = 23500;
+        
+    }
+
+    public Person(String name, int age, int salary) {
+        this.name = name;
+        this.age = age;
+        this.salary = salary;
+    }
+    //class method
+    public static int cencus(){
+
+    }
     public void haveBirthday() {
         age++;
 
@@ -38,6 +55,6 @@ public class Person {
     }
 
     public String toString() {
-        return "Name: " + name + "Age: " + age + "Salary: " + salary;
+        return "Name: " + name + "\t" + "Age: " + age + "\t" + "Salary: " + salary;
     }
 }
