@@ -1,6 +1,7 @@
 public class PersonTest {
     public static void main(String[] args) {
-        Person john = new Person();
+        Person john = new Person("John Goe", 67, 24000);
+        System.out.println(john);
         john.setName("John Doe");
         john.setAge(42);
         Person jane = new Person();
