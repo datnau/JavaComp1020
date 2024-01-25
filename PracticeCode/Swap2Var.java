@@ -1,4 +1,3 @@
-package PracticeCode;
 
 public class Swap2Var {
     public static void main(String[] args) {

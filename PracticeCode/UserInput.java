@@ -1,4 +1,3 @@
-package PracticeCode;
 
 import java.util.Scanner;
 
@@ -10,6 +9,7 @@ public class UserInput {
         System.out.println("How old are you: ");
         int age = scanner.nextInt();
         scanner.nextLine();
+        scanner.close();
         /*
          * Khi bạn sử dụng nextInt(), nó chỉ đọc số nguyên và không đọc ký tự newline
          * (\n) nằm sau nó trong bộ đệm (buffer).
