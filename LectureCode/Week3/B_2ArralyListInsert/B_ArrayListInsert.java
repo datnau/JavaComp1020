@@ -5,6 +5,7 @@
 
 import java.util.ArrayList;
 import java.util.Scanner;
+//import java.util.*;
 
 public class B_ArrayListInsert {
 
@@ -14,9 +15,9 @@ public class B_ArrayListInsert {
 
         arr.add("ant");
         arr.add("bat");
-        arr.add("clk");
-        arr.add("fat");
-        arr.add("erog");
+        arr.add("cat");
+        arr.add("frog");
+        arr.add("eagle");
 
         System.out.println(arr.toString());
 
@@ -28,12 +29,12 @@ public class B_ArrayListInsert {
 
         while (!sc.hasNextInt()) {
             String animal = sc.next();
-            System.out.println("Add " + animal);
+            System.out.println("Add ->" + animal);
 
             for (int index = 0; index < arr.size(); index++) {
                 if (arr.get(index).compareTo(animal) > 0) {
 
-                    arr.add(index, animal);
+                    arr.add(index, animal);// insertion
                     break; // breaks the loop
 
                 }
@@ -44,13 +45,14 @@ public class B_ArrayListInsert {
                 }
 
             }
-            System.out.println(arr.toString());
+            System.out.println(arr);
             System.out.println("Enter the next animal or any number to exit:");
             animal = sc.nextLine();
 
         }
 
         System.out.println("Final arrayList: " + arr.toString());
+        sc.close();
 
     }
 
