@@ -21,7 +21,8 @@ public class StringMethods {
         System.out.println(name3.indexOf('T'));
         System.out.println(name3.toUpperCase());
         System.out.println(name3.toLowerCase());
-        System.out.println(name3.trim());
+        System.out.println(name3.trim());/*Phương thức này được sử dụng để loại bỏ các khoảng trắng ở đầu 
+                                           và cuối chuỗi (không loại bỏ các khoảng trắng ở giữa chuỗi)*/
         System.out.println(name3.replace('a', 'o'));
 
     }
