@@ -5,28 +5,22 @@ public class TwoArrayList {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
-        // Input for arr1
         System.out.println("Enter elements for arr1: ");
         ArrayList<String> arr1 = readArrayList(in);
 
-        // Input for arr2
         System.out.println("Enter elements for arr2: ");
         ArrayList<String> arr2 = readArrayList(in);
 
-        // Joining the ArrayLists
         ArrayList<String> joinedArr = new ArrayList<>(arr1);
-        joinedArr.addAll(arr2);
+        for (int i = 0; i < arr1.size(); i++) {
+            joinedArr.add(arr1[i]);
+        }
+        for (int i = 0; i < arr2.size(); i++) {
+            joinedArr.add(arr2[i]);
+        }
 
-        // Displaying the output
-<<<<<<< HEAD
         System.out.println("array1: " + joinedArr);
         System.out.println("array2: " + arr2);
-=======
-        System.out.println("array1: " + arr1);
-        System.out.println("array2: " + arr2);
-        System.out.println("Joined Array: " + joinedArr);
->>>>>>> a05f94c73ac8c23e3d00516227a374e4ccbb85b1
-
         in.close();
     }
 

@@ -1,29 +1,18 @@
 import java.util.ArrayList;
-import java.util.Scanner;
 
-public class ArrayListJoin {
+public class FixErrorArray {
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-
-        // Input for arr1
-        System.out.println("Enter elements for arr1: ");
-        String[] arr1Input = in.nextLine().split(" ");
-        ArrayList<String> arr1 = new ArrayList<>(Arrays.asList(arr1Input));
-
-        // Input for arr2
-        System.out.println("Enter elements for arr2: ");
-        String[] arr2Input = in.nextLine().split(" ");
-        ArrayList<String> arr2 = new ArrayList<>(Arrays.asList(arr2Input));
-
-        // Joining the ArrayLists
-        ArrayList<String> joinedArr = new ArrayList<>(arr1);
-        joinedArr.addAll(arr2);
-
-        // Displaying the output
-        System.out.println("array1: " + joinedArr);
-
-        // Creating array2 separately for clarity
-        ArrayList<String> arr2Output = new ArrayList<>(arr2);
-        System.out.println("array2: " + arr2Output);
+        ArrayList<String> myArr = new ArrayList<String>();
+        String one = "One";
+        String two = new String("Two");
+        myArr.add(two);
+        myArr.add(one);
+        ArrayList<String> otherArr = myArr;
+        otherArr.add("Three");
+        for (String val : myArr)
+            System.out.print(val + "->");
+        System.out.println();
+        for (String val : otherArr)
+            System.out.print(val + "->");
     }
 }
