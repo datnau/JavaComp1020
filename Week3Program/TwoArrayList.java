@@ -18,8 +18,14 @@ public class TwoArrayList {
         joinedArr.addAll(arr2);
 
         // Displaying the output
+<<<<<<< HEAD
         System.out.println("array1: " + joinedArr);
         System.out.println("array2: " + arr2);
+=======
+        System.out.println("array1: " + arr1);
+        System.out.println("array2: " + arr2);
+        System.out.println("Joined Array: " + joinedArr);
+>>>>>>> a05f94c73ac8c23e3d00516227a374e4ccbb85b1
 
         in.close();
     }
