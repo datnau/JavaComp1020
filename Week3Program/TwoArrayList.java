@@ -7,22 +7,20 @@ public class TwoArrayList {
 
         // Input for arr1
         System.out.println("Enter elements for arr1: ");
-        ArrayList<String> arr1 = ArrayList < String > (in);
+        ArrayList<String> arr1 = readArrayList(in);
 
         // Input for arr2
         System.out.println("Enter elements for arr2: ");
-        ArrayList<String> arr2 = ArrayList(in);
+        ArrayList<String> arr2 = readArrayList(in);
 
         // Joining the ArrayLists
-        ArrayList<String> joinedArr = new ArrayList<String>(arr1);
-        joinedArr.add(arr2);
+        ArrayList<String> joinedArr = new ArrayList<>(arr1);
+        joinedArr.addAll(arr2);
 
         // Displaying the output
-        System.out.println("array1: " + joinedArr);
-
-        // Creating arr2Output separately for clarity
-        ArrayList<String> arr2Output = new ArrayList<String>(arr2);
-        System.out.println("array2: " + arr2Output);
+        System.out.println("array1: " + arr1);
+        System.out.println("array2: " + arr2);
+        System.out.println("Joined Array: " + joinedArr);
 
         in.close();
     }
