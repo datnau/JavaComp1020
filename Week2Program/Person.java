@@ -8,7 +8,7 @@ public class Person {
         name = "newBorn";
         age = 1;
         salary = 23500;
-        
+
     }
 
     public Person(String name, int age, int salary) {
@@ -16,10 +16,13 @@ public class Person {
         this.age = age;
         this.salary = salary;
     }
-    //class method
-    public static int cencus(){
+
+    // class method
+    public static int cencus() {
+        return cencus();
 
     }
+
     public void haveBirthday() {
         age++;
 
