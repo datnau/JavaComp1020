@@ -20,7 +20,7 @@ public class Course {
             System.out.println("The student " + student + " is already registered to " + shortTitle + "!");
         } else if (classList.size() < maxClassSize) {
             classList.add(student);
-            student.addCourse(this); // Assuming Student class has a method to add a course to its course list
+            student.addCourse(this);
             System.out.println("The student " + student + " has been registered successfully to " + shortTitle + ".");
         } else if (waitList.contains(student)) {
             System.out.println("The student " + student + " is already on the waitlist for " + shortTitle + "!");
