@@ -4,10 +4,9 @@ public class F_ExceptionHandling {
             int[] NumList = { 1, 2, 3, 4 };
             System.out.println(NumList[1]);
             System.out.println("Hello World");
-
         } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println("Something went wrong. Check the index value.");
-
+            
         }
     }
 }
