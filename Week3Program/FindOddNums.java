@@ -14,45 +14,28 @@ public class FindOddNums {
         numbers.add(90);
         numbers.add(142);
 
-        // a) Remove odd numbers from the list
-        removeOddNumbers(numbers);
-
-        // b) Find the maximum and minimum element
-        int maxElement = findMaxElement(numbers);
-        int minElement = findMinElement(numbers);
-
-        // Display results
-        System.out.println("ArrayList after removing odd numbers: " + numbers);
-        System.out.println("Maximum element: " + maxElement);
-        System.out.println("Minimum element: " + minElement);
-    }
-
-    private static void removeOddNumbers(ArrayList<Integer> numbers) {
+        // Remove odd numbers
         for (int i = 0; i < numbers.size(); i++) {
             if (numbers.get(i) % 2 != 0) {
                 numbers.remove(i);
-                i--; // Adjust index after removal
+                i--;
             }
         }
-    }
 
-    private static int findMaxElement(ArrayList<Integer> numbers) {
-        int maxElement = Integer.MIN_VALUE;
-        for (int num : numbers) {
-            if (num > maxElement) {
-                maxElement = num;
+        // Find min and max values
+        int minValue = numbers.get(0);
+        int maxValue = numbers.get(0);
+        for (int i = 1; i < numbers.size(); i++) {
+            int current = numbers.get(i);
+            if (current < minValue) {
+                minValue = current;
+            }
+            if (current > maxValue) {
+                maxValue = current;
             }
         }
-        return maxElement;
-    }
 
-    private static int findMinElement(ArrayList<Integer> numbers) {
-        int minElement = Integer.MAX_VALUE;
-        for (int num : numbers) {
-            if (num < minElement) {
-                minElement = num;
-            }
-        }
-        return minElement;
+        System.out.println("Minimum value: " + minValue);
+        System.out.println("Maximum value: " + maxValue);
     }
 }
