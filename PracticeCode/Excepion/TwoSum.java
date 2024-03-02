@@ -25,6 +25,7 @@ public class TwoSum {
         } finally {
             System.out.println("***End of program***");
         }
+        sc.close();
     }
 
     public static int[] twoSum(int[] nums, int target) {

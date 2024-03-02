@@ -22,6 +22,7 @@ public class CustomException {
             System.out.println("You are in the finally block!");
         }
         System.out.println("End of program");
+        sc.close();
     }
 
 }
