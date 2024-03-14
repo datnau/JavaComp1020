@@ -1,7 +1,7 @@
 public class MulTable {
 
     public static void main(String[] args) {
-        int limit = 5;
+        int limit = 4;
         int[][] multiplicationTables = generateMultiplicationTables(limit);
         displayMultiplicationTables(multiplicationTables);
     }
