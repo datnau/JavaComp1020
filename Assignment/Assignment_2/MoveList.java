@@ -5,11 +5,11 @@ public class MoveList {
     private ArrayList<Move> moves;
 
     public MoveList() {
-        moves = new ArrayList<>();
+        this.moves = new ArrayList<>();
     }
 
-    public void addMove(Move m) {
-        moves.add(m);
+    public void addMove(Move move) {
+        moves.add(move);
     }
 
     public boolean isEmpty() {
@@ -17,20 +17,19 @@ public class MoveList {
     }
 
     public Move randomMove() {
-        if (moves.isEmpty()) {
-            return null;
-        } else {
+        if (!moves.isEmpty()) {
             Random random = new Random();
-            int index = random.nextInt(moves.size());
-            return moves.get(index);
+            return moves.get(random.nextInt(moves.size()));
         }
+        return null;
     }
 
+    @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        for (Move move : moves) {
-            sb.append(move.toString()).append("\n");
+        String result = "";
+        for (int i = 0; i < moves.size(); i++) {
+            result += moves.get(i).toString() + "\n";
         }
-        return sb.toString();
+        return result;
     }
 }

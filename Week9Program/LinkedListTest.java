@@ -1,7 +1,7 @@
 public class LinkedListTest {
 
     public static void main(String[] args) {
-        LinkedList list = new LinkedList();
+        ObjectList list = new LinkedList();
         list.add(24);
         list.add(365);
         list.add(12);

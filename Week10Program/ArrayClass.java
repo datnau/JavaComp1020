@@ -1,10 +1,10 @@
 
-public class ArrayClass implements DataClass {
+public class ArrayClass implements IData {
     private int[] dataArray;
     private int size;
 
-    public ArrayClass(int capacity) {
-        dataArray = new int[capacity];
+    public ArrayClass(int numberOfElements) {
+        dataArray = new int[numberOfElements];
         size = 0;
     }
 
@@ -31,14 +31,11 @@ public class ArrayClass implements DataClass {
                 dataArray[i] = dataArray[i + 1];
             }
             size--;
-        } else {
-            System.out.println("Element not found in array.");
         }
     }
 
     @Override
     public void displayElements() {
-        System.out.print("Array elements: ");
         for (int i = 0; i < size; i++) {
             System.out.print(dataArray[i] + " ");
         }

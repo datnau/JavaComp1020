@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-class ArrayListClass implements DataClass {
+class ArrayListClass implements IData {
     private ArrayList<Integer> dataList;
 
     public ArrayListClass() {
@@ -14,14 +14,14 @@ class ArrayListClass implements DataClass {
 
     @Override
     public void removeElement(int element) {
-        dataList.remove(Integer.valueOf(element));
+        dataList.remove(element);
+
     }
 
     @Override
     public void displayElements() {
-        System.out.print("ArrayList elements: ");
-        for (int element = 0; element < dataList.size();element++) {
-            System.out.print(element + " ");
+        for (int element = 0; element < dataList.size(); element++) {
+            System.out.print(dataList.get(element) + " ");
         }
         System.out.println();
     }

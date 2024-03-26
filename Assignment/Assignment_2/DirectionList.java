@@ -20,28 +20,31 @@ public class DirectionList {
     }
 
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("{");
-        for (int i = 0; i < directions.size(); i++) {
-            sb.append(directions.get(i));
-            if (i < directions.size() - 1) {
-                sb.append(",");
-            }
+        String str = "{";
+        for (int i = 0; i < length(); i++) {
+            if (i + 1 == length())
+                str += directions.get(i);
+            else
+                str += directions.get(i) + ", ";
         }
-        sb.append("}");
-        return sb.toString();
+        str += "}";
+        return str;
+    }
+
+    public boolean isEmpty() {
+        return directions.isEmpty();
     }
 
     public static DirectionList allDirections() {
-        DirectionList allDirs = new DirectionList();
-        allDirs.addDirection(new Direction(-1, 0)); // up
-        allDirs.addDirection(new Direction(-1, 1)); // up-right
-        allDirs.addDirection(new Direction(0, 1)); // right
-        allDirs.addDirection(new Direction(1, 1)); // down-right
-        allDirs.addDirection(new Direction(1, 0)); // down
-        allDirs.addDirection(new Direction(1, -1)); // down-left
-        allDirs.addDirection(new Direction(0, -1)); // left
-        allDirs.addDirection(new Direction(-1, -1)); // up-left
-        return allDirs;
+        DirectionList allDirections = new DirectionList();
+        allDirections.addDirection(new Direction(-1, 0)); // up
+        allDirections.addDirection(new Direction(-1, 1)); // up-right
+        allDirections.addDirection(new Direction(0, 1)); // right
+        allDirections.addDirection(new Direction(1, 1)); // down-right
+        allDirections.addDirection(new Direction(1, 0)); // down
+        allDirections.addDirection(new Direction(1, -1)); // down-left
+        allDirections.addDirection(new Direction(0, -1)); // left
+        allDirections.addDirection(new Direction(-1, -1)); // up-left
+        return allDirections;
     }
 }

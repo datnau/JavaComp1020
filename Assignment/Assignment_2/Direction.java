@@ -39,7 +39,6 @@ public class Direction {
             return "< down > < left >";
         } else if (row == 0 && column == -1) {
             return "< left >";
-
         } else {
             return "< up > < left >";
         }

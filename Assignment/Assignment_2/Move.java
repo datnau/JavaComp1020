@@ -7,6 +7,7 @@ public class Move {
         this.row = row;
         this.column = column;
         this.directions = directions;
+
     }
 
     public int getRowNumber() {
@@ -30,6 +31,6 @@ public class Move {
     }
 
     public String toString() {
-        return "(" + row + "," + column + ")" + " flips directions " + directions.toString();
+        return "(" + row + "," + column + ") flips directions " + directions.toString();
     }
 }

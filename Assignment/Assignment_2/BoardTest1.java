@@ -33,9 +33,9 @@ public class BoardTest1 {
     private static void testImportBoardSetup() {
         try {
             System.out.println("\nImport Board Setup Test:");
-            Board board = new Board("fileToImport.txt");
+            Board board = new Board("fileToImport3.txt");
             System.out.println(board);
-        } catch (IOException e) {
+        } catch (Exception e) {
             System.out.println("Failed to import board setup: " + e.getMessage());
         }
     }
