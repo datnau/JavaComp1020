@@ -17,10 +17,10 @@ public class TowerOfHanoi {
 
     public static void solveHanoi(int n, String A, String B, String C) {
         if (n == 1) {
-            System.out.println(String.format("move %d from %s to %s", n, A, C));
+            System.out.println("move " + n + " from " + A + " to " + C);
         } else {
             solveHanoi(n - 1, A, C, B);
-            System.out.println(String.format("move %d from %s to %s", n, A, C));
+            System.out.println("move " + n + " from " + A + " to " + C);
             solveHanoi(n - 1, B, A, C);
         }
     }

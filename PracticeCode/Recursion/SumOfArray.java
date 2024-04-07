@@ -16,7 +16,7 @@ public class SumOfArray {
     }
 
     public static int sumOf(int[] data, int n) {
-        if (n == 0) {
+        if (n < 0) {
             return 0; // Base case: when there are no elements left
         } else {
             return data[n] + sumOf(data, n - 1); // Recursively summing elements

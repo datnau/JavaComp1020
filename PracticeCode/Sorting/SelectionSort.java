@@ -10,7 +10,7 @@ public class SelectionSort {
         }
     }
 
-    public static void selectionSort(int[] arr) {
+    public static int[] selectionSort(int[] arr) {
         for (int i = 0; i < arr.length - 1; i++) {
             int minValueIndex = i;
             for (int j = i + 1; j < arr.length; j++) {
@@ -25,5 +25,6 @@ public class SelectionSort {
                 arr[i] = temp;
             }
         }
+        return arr;
     }
 }
